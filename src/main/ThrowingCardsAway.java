@@ -11,7 +11,9 @@ public class ThrowingCardsAway {
 		int x = 1;
 
 		while (x != 0) {
-			x= sc.nextInt();
+			if(x!=0) {
+				x= sc.nextInt();
+			}
 			ArrayList<Integer> cards = new ArrayList<>();
 			if (x != 0) {
 				for (int i = 1; i <= x; i++) {
@@ -33,7 +35,9 @@ public class ThrowingCardsAway {
 				}
 				System.out.println(acumulate);
 				System.out.println("Remaining cards: " + cards.get(0));
-				
+				if(x==0) {
+					break;
+				}
 			}
 			
 		}
