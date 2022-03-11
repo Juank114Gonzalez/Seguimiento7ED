@@ -1,20 +1,32 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RailwayInPopPushCity {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		int[] a = new int[5];
-		a[1] = sc.nextInt();
-		a[2] = sc.nextInt();
-		a[3] = sc.nextInt();
-		a[4] = sc.nextInt();
-		a[5] = sc.nextInt();
-		
-		System.out.println(a);
-	}
+	public static Scanner sc = new Scanner(System.in);
 
+	public static void main(String[] args) {
+		ArrayList<ArrayList<Integer>> carril = new ArrayList<>();
+
+		int n = sc.nextInt();
+
+		do {
+			do {
+				for (int i = 0; i < n; i++) {
+					carril.add(new ArrayList<Integer>(sc.nextInt()));
+				}
+			}while (carril.get(carril.size() - 1).get(0) == 0);
+			n =sc.nextInt();
+		}while(n != 0);
+		
+
+		for (ArrayList<Integer> a : carril) {
+			for(int b : a) {
+				System.out.println(b);
+			}
+		}
+
+	}
 }

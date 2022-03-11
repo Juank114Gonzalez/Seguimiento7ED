@@ -8,10 +8,10 @@ public class ThrowingCardsAway {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		int x = sc.nextInt();
-		sc.nextLine();
+		int x = 1;
 
 		while (x != 0) {
+			x= sc.nextInt();
 			ArrayList<Integer> cards = new ArrayList<>();
 			if (x != 0) {
 				for (int i = 1; i <= x; i++) {
@@ -33,7 +33,7 @@ public class ThrowingCardsAway {
 				}
 				System.out.println(acumulate);
 				System.out.println("Remaining cards: " + cards.get(0));
-				x= sc.nextInt();
+				
 			}
 			
 		}
